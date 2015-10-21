@@ -4,7 +4,7 @@
     "description": "Package to read the RSS Feeds from URL according RSS v2 standards (https://validator.w3.org/feed/docs/rss2.html)",
     "version": "1.0.0",
     "keywords": ["rss", "feed", "parser"],
-    "homepage": "https://github.com/SkyDriver/Rss-Agent",
+    "homepage": "https://github.com/skydriver/rss-agent",
     "license": "MIT",
     "authors": [
         {
