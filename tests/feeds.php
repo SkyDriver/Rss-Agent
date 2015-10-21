@@ -1,16 +1,15 @@
-## Rss-Agent
-
-Version 1.0.0
-
-Package to read the RSS Feeds from URL according RSS v2 standards (https://validator.w3.org/feed/docs/rss2.html).
-
-Usage
------
-
-```php
-
+<?php
 use RssAgent\RssAgent;
+?>
 
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>RSS Agent</title>
+</head>
+<body>
+
+<?php
 $url = 'https://packagist.org/feeds/packages.rss';
 
 $rss = new RssAgent( $url );
@@ -36,4 +35,7 @@ if( $rss ):
 		);
 	endforeach;
 endif;
-```
+?>
+
+</body>
+</html>
