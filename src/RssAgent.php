@@ -45,11 +45,8 @@ class RssAgent extends Spider
 	 */
 	final public function __construct( $url )
 	{
-		// Prevent from exceptions
-		if (empty($url) || !class_exists('\SimpleXmlElement') || !function_exists('curl_init'))
-			return;
-
-		$this->rss($url);
+		if ($url)
+			$this->rss($url);
 	} // End of function __construct();
 
 
@@ -85,10 +82,14 @@ class RssAgent extends Spider
 	 */
 	final public function rss( $url )
 	{
+		// Prevent from exceptions
+		if (empty($url) || !class_exists('\SimpleXmlElement') || !function_exists('curl_init'))
+			return $this->feeds = false;
+
 		// Try to get the XML data
 		$xml = $this->xml($url);
 		if (empty($xml))
-			return;
+			return $this->feeds = false;
 
 		// Parse and set into feed data.
 		$dom = new \SimpleXmlElement( $xml );
@@ -97,6 +98,8 @@ class RssAgent extends Spider
 
 		// Clear memory
 		unset($dom);
+
+		return true;
 	} // End of function rss();
 
 
