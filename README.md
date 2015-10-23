@@ -14,13 +14,15 @@ Usage
 
 ```php
 
+require_once __DIR__ . '/vendor/autoload.php';
+
 use RssAgent\RssAgent;
 
 $url = 'https://packagist.org/feeds/packages.rss';
 
 $rss = new RssAgent( $url );
 
-if( $rss ):
+if( $rss->feeds ):
 	// You can get every feed channel property 
 	printf(
 		'<h1>Feed from <a href="%s">%s</a></h1>',
