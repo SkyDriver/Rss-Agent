@@ -131,7 +131,7 @@ class RssAgent extends Spider
 	 */
 	public function __get( $key )
 	{
-		return property_exists($this->feeds, $key) ? $this->feeds->{$key} : null;
+		return (is_object($this->feeds) && property_exists($this->feeds, $key)) ? $this->feeds->{$key} : null;
 	} // End of function __get();
 
 } // End of class RssAgent;
