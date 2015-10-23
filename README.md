@@ -4,6 +4,11 @@ Version 1.0.0
 
 Package to read the RSS Feeds from URL according RSS v2 standards (https://validator.w3.org/feed/docs/rss2.html).
 
+Install
+-------
+
+This package can be found on [packagist](https://packagist.org/packages/skydriver/rss-agent) and is best loaded using [composer](http://getcomposer.org/).
+
 Usage
 -----
 
